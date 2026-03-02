@@ -69,7 +69,7 @@ export default function ReetokenPartnerPage() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=1935&auto=format&fit=crop" 
+              src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/REEToken%20Hero%20Image%20(1).png" 
               alt="Tokenization Infrastructure" 
               className="w-full h-full object-cover"
             />
@@ -155,7 +155,7 @@ export default function ReetokenPartnerPage() {
           {/* Right Column - Image Card */}
           <div className="h-full min-h-[500px] rounded-[28px] overflow-hidden shadow-xl relative">
             <img 
-              src="https://images.unsplash.com/photo-1622630998477-20aa696fa4f5?q=80&w=2000&auto=format&fit=crop" 
+              src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/REEToken%20Hero%20Image%20(1).png" 
               alt="End-to-End Tokenization" 
               className="w-full h-full object-cover"
             />
@@ -211,7 +211,7 @@ export default function ReetokenPartnerPage() {
       <section className="py-10 px-4 md:px-6 max-w-[1200px] mx-auto">
         <div className="h-[400px] md:h-[500px] w-full rounded-[28px] overflow-hidden shadow-sm">
           <img 
-            src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2069&auto=format&fit=crop" 
+            src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/about-ree-token.png" 
             alt="Gold nuggets and network connections" 
             className="w-full h-full object-cover"
           />
@@ -242,50 +242,13 @@ export default function ReetokenPartnerPage() {
               </div>
             </div>
 
-            {/* Right Content - Relationship Map (3-to-1 Layout) */}
+            {/* Right Content - Relationship Map (Image) */}
             <div className="relative w-full flex items-center justify-center lg:justify-end py-8 md:py-0">
-              <div className="flex items-center gap-8 md:gap-16 relative w-full max-w-2xl">
-                
-                {/* Left Column Nodes (Inputs) */}
-                <div className="flex flex-col gap-6 w-full md:w-auto flex-1">
-                  {[
-                    "Mineral Resources",
-                    "Green Extraction",
-                    "Advanced Materials"
-                  ].map((label, i) => (
-                    <div key={i} className="bg-white px-6 py-4 rounded-full shadow-sm border border-slate-100 text-sm font-bold text-slate-800 whitespace-nowrap relative flex items-center justify-between group">
-                      {label}
-                      <div className="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center ml-4">
-                        <Zap className="h-4 w-4 text-white" />
-                      </div>
-                      {/* Connector Dot */}
-                      <div className="hidden md:block absolute -right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-slate-300 rounded-full border-2 border-[#FDF8F3]" />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Right Column Node (Output) */}
-                <div className="flex flex-col gap-6 w-full md:w-auto flex-1 justify-center">
-                  <div className="bg-black text-white px-8 py-6 rounded-full shadow-lg flex items-center justify-center gap-3 relative">
-                    {/* Connector Dot */}
-                    <div className="hidden md:block absolute -left-1.5 top-1/2 -translate-y-1/2 w-3 h-3 bg-slate-300 rounded-full border-2 border-[#FDF8F3]" />
-                    
-                    <Layers className="h-6 w-6 text-blue-400" />
-                    <span className="font-bold tracking-wide text-lg">REEToken</span>
-                  </div>
-                </div>
-
-                {/* SVG Connecting Lines - Desktop Only */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible hidden md:block" style={{ zIndex: 0 }}>
-                  {/* Top Input to Output */}
-                  <path d="M 220 40 C 300 40, 300 150, 380 150" fill="none" stroke="#CBD5E1" strokeWidth="1.5" />
-                  {/* Middle Input to Output */}
-                  <path d="M 220 150 C 300 150, 300 150, 380 150" fill="none" stroke="#CBD5E1" strokeWidth="1.5" />
-                  {/* Bottom Input to Output */}
-                  <path d="M 220 260 C 300 260, 300 150, 380 150" fill="none" stroke="#CBD5E1" strokeWidth="1.5" />
-                </svg>
-
-              </div>
+              <img 
+                src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/REEToken%20New%20Flow%20Image%20(1).png" 
+                alt="REEToken Process Flow" 
+                className="w-full max-w-lg object-contain"
+              />
             </div>
           </div>
         </div>

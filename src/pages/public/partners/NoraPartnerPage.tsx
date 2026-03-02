@@ -78,7 +78,7 @@ export default function NoraPartnerPage() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1579547621706-1a9c79d5c9f1?q=80&w=2070&auto=format&fit=crop" 
+              src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/Nora%20Hero%20Image%20New%20(1).png" 
               alt="Mining Excavation" 
               className="w-full h-full object-cover"
             />
@@ -226,34 +226,13 @@ export default function NoraPartnerPage() {
               </div>
             </div>
 
-            {/* Right Collage - 3 Column Grid */}
-            <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[500px]">
-              {/* Image B: Top Left */}
-              <div className="col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-md">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1740&auto=format&fit=crop" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                  alt="Industrial" 
-                />
-              </div>
-              
-              {/* Image A: Right (Tall) - Spans 2 cols, 2 rows */}
-              <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-md">
-                <img 
-                  src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1740&auto=format&fit=crop" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                  alt="Lab" 
-                />
-              </div>
-
-              {/* Image C: Bottom Left */}
-              <div className="col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-md">
-                <img 
-                  src="https://images.unsplash.com/photo-1516937941344-00b4ec7330f1?q=80&w=1740&auto=format&fit=crop" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                  alt="Space" 
-                />
-              </div>
+            {/* Right Image - Single Large Image */}
+            <div className="h-[500px] flex items-center justify-center">
+              <img 
+                src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/Why%20Nora%20Image.png" 
+                className="w-full h-full object-contain" 
+                alt="Nora Technology Visualization" 
+              />
             </div>
           </div>
         </section>
