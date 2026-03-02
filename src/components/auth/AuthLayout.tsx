@@ -2,6 +2,7 @@
 import * as React from "react"
 import { Link, Outlet, useLocation } from "react-router-dom"
 import { ShieldCheck, Search, Sparkles, ArrowRight } from "lucide-react"
+import { Logo } from "@/components/common/Logo"
 
 export default function AuthLayout() {
   const location = useLocation();
@@ -14,16 +15,15 @@ export default function AuthLayout() {
         
         {/* Left Side - Form Container */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 md:px-16 lg:px-24 xl:px-32 py-12 relative">
-          <div className="max-w-[440px] mx-auto w-full">
+          <div className="max-w-[440px] mx-auto w-full flex flex-col items-center">
             {/* Logo */}
-            <Link to="/" className="inline-flex items-center gap-3 mb-16 group">
-              <div className="h-10 w-10 bg-brand-orange rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-orange/20 group-hover:scale-105 transition-transform">
-                <span className="font-bold text-xl">M</span>
-              </div>
-              <span className="text-2xl font-bold text-slate-900 tracking-tight">The Minexchange</span>
+            <Link to="/" className="inline-block mb-16 group">
+              <Logo className="h-10 w-auto" />
             </Link>
 
-            <Outlet />
+            <div className="w-full text-left">
+              <Outlet />
+            </div>
 
             {/* Footer Links */}
             <div className="mt-16 flex items-center justify-between text-xs text-slate-400 border-t border-slate-100 pt-8">

@@ -144,7 +144,7 @@ export default function HomePage() {
                   {/* Image Area */}
                   <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-2xl mb-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop" 
+                      src="https://pub-a5745bb2a56d4cb0a6acea2e8f8fda37.r2.dev/ChatGPT%20Image%20Mar%201%2C%202026%2C%2011_07_10%20PM.webp" 
                       alt="Mining Operations" 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />

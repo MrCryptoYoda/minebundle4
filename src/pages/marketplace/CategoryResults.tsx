@@ -8,6 +8,7 @@ import { ServiceSearchHeader } from '@/components/marketplace/ServiceSearchHeade
 import { ServiceFilterPanel } from '@/components/marketplace/ServiceFilterPanel';
 import { FilterDrawer } from '@/components/marketplace/FilterDrawer';
 import { cn } from '@/lib/utils';
+import { AISummaryPanel } from '@/components/search/AISummaryPanel';
 
 export default function CategoryResults() {
   const { slug } = useParams<{ slug: string }>();
@@ -166,6 +167,8 @@ export default function CategoryResults() {
         <div className="flex-1 flex h-full overflow-hidden relative">
           <div className="flex-1 h-full overflow-y-auto p-6 transition-all duration-300 w-full">
             
+
+
             {/* Page Header inside Content */}
             <div className="mb-6">
               <div className="flex items-center gap-2 text-xs text-slate-400 mb-2">
@@ -176,6 +179,19 @@ export default function CategoryResults() {
               <h1 className="text-3xl font-bold text-white mb-2">{category.name}</h1>
               <p className="text-slate-400 max-w-3xl">{category.description}</p>
             </div>
+
+            {/* AI Summary Panel */}
+            {!isLoading && services.length > 0 && (
+              <div className="mb-8">
+                <AISummaryPanel 
+                  query={category.name} 
+                  resultCount={services.length} 
+                  type="services"
+                  variant="dark"
+                  className="bg-slate-900/50 border-white/10"
+                />
+              </div>
+            )}
 
             <div className="flex items-center justify-between mb-6">
               <div className="text-sm text-slate-400">

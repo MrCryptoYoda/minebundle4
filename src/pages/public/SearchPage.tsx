@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils';
 import { interpretSearchQuery } from '@/services/geminiService';
 import { COMMODITY_TAXONOMY } from '@/data/commodityTaxonomy';
 import { LOCATION_TAXONOMY } from '@/data/locationTaxonomy';
+import { AISummaryPanel } from '@/components/search/AISummaryPanel';
 
 export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -191,6 +192,8 @@ export default function SearchPage() {
                 "flex-1 h-full overflow-y-auto p-6 transition-all duration-300",
                 viewMode === 'map' ? "w-full lg:w-[55%]" : "w-full"
               )}>
+
+
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h2 className="text-2xl font-bold text-slate-900">Active Advertisements</h2>
@@ -198,15 +201,18 @@ export default function SearchPage() {
                       {isLoading ? 'Searching...' : `Showing ${filteredListings.length} properties matching your criteria`}
                     </p>
                   </div>
-                  
-                  {/* Map Toggle for Mobile/Tablet or if we want it in list view too? 
-                      Actually SearchHeader handles view switching now. 
-                      But maybe we want a quick toggle? 
-                      The previous design had a "Show Map" button.
-                      Now we have a view switcher.
-                      I'll hide this button since we have the header switcher.
-                  */}
                 </div>
+
+                {/* AI Summary Panel */}
+                {!isLoading && filteredListings.length > 0 && (
+                  <div className="mb-8">
+                    <AISummaryPanel 
+                      query={query || "Mining Assets"} 
+                      resultCount={filteredListings.length} 
+                      type="assets"
+                    />
+                  </div>
+                )}
 
                 {/* Filter Pills (Design Reference) */}
                 <div className="flex gap-2 mb-6 overflow-x-auto pb-2 scrollbar-hide">
